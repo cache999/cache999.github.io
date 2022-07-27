@@ -3,29 +3,31 @@
   <head>
     <meta charset="utf-8">
 
-    <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
-     <script src="main.js"></script> 
+    <title>Countdown</title>
 
-    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="countdown.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.fittext.js"></script>
+    <script src="countdown.js"></script> 
+
   </head>
-
-  <body onload="main_loop()">
-    <!-- Here is our main header that is used across all the pages of our website -->
-
-    <header>
-      <h1>Justache Calendar Clock</h1>
-    </header>
-
-
-    <!-- Here is our page's main content -->
+  <body>
     <main>
-      <p id='clock'>00:00:00 DD/MM/YY/AA AJ</p>
-      <p>HH:MM:BB.BBB DD/MM/YY/AA AJ/BJ</p>
+      
+
+      <div id='countdown_div'>
+        <p id='countdown_clock'>DD:MM:HH:BBB
+          <span id='milliblinks'>.00</span>
+        </p>
+        <p id='description'>12:00pm HKT, 9th August, 2022<br>Hong Kong Science Museum<br></p>
+        <p class='glitch' id='bethere'>Be there.</p>
+      </div>
+    </main>
 
   </body>
 </html>
